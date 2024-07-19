@@ -14,7 +14,7 @@ var pizzaCases = []struct {
 		Name:   "order less than 1",
 		Input:  0,
 		Output: "",
-		Err:    errors.New("Invalid order: Value must be between 1 and 10"),
+		Err:   ErrInvalidOrder,
 	},
 	{
 		Name:   "order exactly 1",
@@ -38,13 +38,13 @@ var pizzaCases = []struct {
 		Name:   "order more than 10",
 		Input:  11,
 		Output: "",
-		Err:    errors.New("Only 10 pizzas can be ordered"),
+		Err:    ErrMorePizzas,
 	},
 	{
 		Name:   "order with three-digit number",
 		Input:  100,
 		Output: "",
-		Err:    errors.New("Only 10 pizzas can be ordered"),
+		Err:   ErrMorePizzas,
 	},
 }
 
