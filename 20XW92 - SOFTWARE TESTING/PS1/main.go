@@ -1,10 +1,10 @@
 package main
 
 import (
-				"fmt"
-				"slices"
+	"fmt"
+	"slices"
 )
 
 func main() {
-				fmt.Println(slices.Min([]int{}))
+	fmt.Println(slices.Min([]int{}))
 }
