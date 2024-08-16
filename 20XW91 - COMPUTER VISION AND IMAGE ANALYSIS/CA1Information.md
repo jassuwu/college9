@@ -1,49 +1,83 @@
-# 16AUG2024  Internal Test I Revision class
-## Unit I
-### Image digitization
-- **What are the steps to convert to Digital Image? / How to do Image Digitization?**
-- It's a three step process.
-`Analog Image -> Sampling -> Quantization -> Encoding -> Digital Image`
-	1. **Sampling** `fs(x, y)`
-		- Taking specific instance of the signal.
-		- Utmost care for choosing sampling freq.
-		- Improper choice of sampling freq lead to **Aliasing**.
-	2.  **Quantization** :
-		- Mapping a large set of values to a smaller set of values.
-		- Non-linear and Irreversible process
-		- Scalar, Vector
-		- Irreversible because it's a many to one mapping, leading to loss of uniqueness
-	3. **Encoding**:
-		- Conversion of text.
-		- Fixed, Variable length encoding.
-- **g/n f(x, y) = 2cos 2 pi (4x + 6y), ∆x = 0.2, ∆y = 0.4, find the reconstructed signal. (Solved similar problems in class.)**
-### Distance measures (mostly for 2 marks)
-- Euclidean distance
-- Chessboard distance
-- City-block distance
-###  Adjacency of Pixel
-- 4-adjacency
-- 8-adjacency
-- m-adjacency
-## Unit II
-### Image Segmentation
-- **Region based - Quad-tree Decomposition**
-### Edge detection
-- **Canny Edge Detector - why, usecases and steps involved**
-	1.  Gaussian Smoothing of input images
-	2.  Gradient calculation along horizontal and vertical axis
-	3.  Non-maximum suppression of false edges
-	4.  Applying hysteresis thresholding
-### Convolution and Correlation
-- Questions will be generic in terms of methods to use like: **Perform 2-dimensional convolution/correlation on ...**. Can use any applicable method. Explain the steps if necessary.
-### G/n [[2, 5, 6], [10, 122, 5], [6, 2, 5]] -- Replace the center pixel value with ... (10 marks)
-**1. Averaging Filter (Default A mask: 1/16 [[1, 1, 1], [1, 1, 1], [1, 1, 1]] ),
-2. WA Filter (Default WA mask: 1/16 * [[1, 2, 1], [2, 4, 2], [1, 2, 1]] ),
-3. Median Filter,
-4. Mode Filter,
-5. Mid point `(max_val - min_val) / 2`,
-6. Harmonic Mean,
-7. etc...**
+# 16AUG2024 Internal Test I Revision Class
 
-P.S. Know the different means.
-### Histogram Equalization - Will be covered upcoming Wednesday (21AUG2024).
+## Unit I
+
+### Image Digitization
+- **What are the steps to convert to a Digital Image? / How to do Image Digitization?**
+
+  Image digitization is a three-step process:
+
+  1. **Sampling**:
+     - Denoted as `fs(x, y)`.
+     - Involves taking specific instances of the signal.
+     - It is crucial to choose the appropriate sampling frequency to avoid **Aliasing**.
+
+  2. **Quantization**:
+     - Mapping a large set of values to a smaller set.
+     - This is a non-linear and irreversible process.
+     - Can be scalar or vector.
+     - Irreversible because it's a many-to-one mapping, leading to loss of uniqueness.
+
+  3. **Encoding**:
+     - Conversion of quantized values into a digital form.
+     - Involves fixed or variable length encoding.
+
+- **Example Problem:**
+
+  For \( g/n \) defined as \( 2 \cos(2 \pi (4x + 6y)) \), with \( \Delta x = 0.2 \) and \( \Delta y = 0.4 \), find the reconstructed signal. (Refer to similar solved problems in class.)
+
+### Distance Measures (mostly for 2 marks)
+- **Euclidean Distance**
+- **Chessboard Distance**
+- **City-Block Distance**
+
+### Adjacency of Pixels
+- **4-Adjacency**
+- **8-Adjacency**
+- **m-Adjacency**
+
+## Unit II
+
+### Image Segmentation
+- **Region-based Segmentation - Quad-tree Decomposition**
+
+### Edge Detection
+- **Canny Edge Detector:**
+  - **Why:** To detect edges in an image with accuracy.
+  - **Use Cases:** Object detection, image analysis.
+  - **Steps Involved:**
+    1. **Gaussian Smoothing**: Smooth the input image to reduce noise.
+    2. **Gradient Calculation**: Compute gradients along horizontal and vertical axes.
+    3. **Non-Maximum Suppression**: Eliminate false edges by keeping only local maxima.
+    4. **Hysteresis Thresholding**: Apply double thresholding to finalize edge detection.
+
+### Convolution and Correlation
+- **Tasks:** Questions will be generic, such as "Perform 2-dimensional convolution/correlation on...". Use applicable methods and explain the steps if necessary.
+
+### Image Filtering
+- **Example Problem:**
+
+  Given the matrix \( G/n \) as:
+
+  \[
+  \begin{bmatrix}
+  2 & 5 & 6 \\
+  10 & 122 & 5 \\
+  6 & 2 & 5
+  \end{bmatrix}
+  \]
+
+  Replace the center pixel value with:
+
+  1. **Averaging Filter** (Default mask: \( \frac{1}{16} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix} \))
+  2. **Weighted Averaging (WA) Filter** (Default WA mask: \( \frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix} \))
+  3. **Median Filter**
+  4. **Mode Filter**
+  5. **Midpoint Filter**: \( \frac{\text{max\_val} - \text{min\_val}}{2} \)
+  6. **Harmonic Mean Filter**
+
+  *Note: Familiarize yourself with different means.*
+
+### Histogram Equalization
+- Will be covered in the upcoming class on **21AUG2024**.
+
