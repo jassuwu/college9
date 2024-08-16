@@ -1,38 +1,40 @@
-﻿
-# 16AUG2024 Internal Test I Revision Class
+﻿# 16AUG2024 CA Test I Infomation Class
 
 ## Unit I
 
 ### Image Digitization
-- **What are the steps to convert to a Digital Image? / How to do Image Digitization?**
 
-  Image digitization is a three-step process:
+- **Steps to Convert to a Digital Image / How to Do Image Digitization:**
 
-  1. **Sampling**:
-     - Denoted as $fs(x, y)$.
-     - Involves taking specific instances of the signal.
-     - It is crucial to choose the appropriate sampling frequency to avoid **Aliasing**.
+  Image digitization involves three main steps:
 
-  2. **Quantization**:
-     - Mapping a large set of values to a smaller set.
-     - This is a non-linear and irreversible process.
-     - Can be scalar or vector.
-     - Irreversible because it's a many-to-one mapping, leading to loss of uniqueness.
+  1. **Sampling**
+     - Denoted as `fs(x, y)`.
+     - This involves taking discrete samples of the signal.
+     - It’s important to choose the right sampling frequency to avoid **Aliasing**.
 
-  3. **Encoding**:
-     - Conversion of quantized values into a digital form.
-     - Involves fixed or variable length encoding.
+  2. **Quantization**
+     - This maps a large set of values to a smaller set.
+     - It’s a non-linear and irreversible process.
+     - Quantization can be scalar or vector.
+     - It’s irreversible due to many-to-one mapping, leading to a loss of uniqueness.
+
+  3. **Encoding**
+     - Converts quantized values into a digital form.
+     - Involves either fixed or variable length encoding.
 
 - **Example Problem:**
 
-  For $signal$ defined as $2 \cos(2 \pi (4x + 6y))$, with $\Delta x = 0.2$ and $\Delta y = 0.4$, find the reconstructed signal. (Refer to similar solved problems in class.)
+  For a function defined as `g/n = 2 * cos(2 * pi * (4x + 6y))`, with `Δx = 0.2` and `Δy = 0.4`, find the reconstructed signal. (Refer to similar problems solved in class.)
 
 ### Distance Measures (mostly for 2 marks)
+
 - **Euclidean Distance**
 - **Chessboard Distance**
 - **City-Block Distance**
 
 ### Adjacency of Pixels
+
 - **4-Adjacency**
 - **8-Adjacency**
 - **m-Adjacency**
@@ -40,46 +42,47 @@
 ## Unit II
 
 ### Image Segmentation
-- **Region-based Segmentation - Quad-tree Decomposition**
+
+- **Region-Based Segmentation - Quad-tree Decomposition**
 
 ### Edge Detection
+
 - **Canny Edge Detector:**
-  - **Why:** To detect edges in an image with accuracy.
+  - **Purpose:** To detect edges in an image with high accuracy.
   - **Use Cases:** Object detection, image analysis.
   - **Steps Involved:**
-    1. **Gaussian Smoothing**: Smooth the input image to reduce noise.
-    2. **Gradient Calculation**: Compute gradients along horizontal and vertical axes.
-    3. **Non-Maximum Suppression**: Eliminate false edges by keeping only local maxima.
-    4. **Hysteresis Thresholding**: Apply double thresholding to finalize edge detection.
+    1. **Gaussian Smoothing:** Smooth the image to reduce noise.
+    2. **Gradient Calculation:** Compute gradients in horizontal and vertical directions.
+    3. **Non-Maximum Suppression:** Retain only local maxima to eliminate false edges.
+    4. **Hysteresis Thresholding:** Apply double thresholding to finalize edge detection.
 
 ### Convolution and Correlation
-- **Tasks:** Questions will be generic, such as "Perform 2-dimensional convolution/correlation on...". Use applicable methods and explain the steps if necessary.
+
+- **Tasks:** Perform 2-dimensional convolution/correlation as specified. Apply relevant methods and explain the steps if needed.
 
 ### Image Filtering
+
 - **Example Problem:**
 
-  Given the matrix as:
+  Given the matrix `G/n` as:
 
-  $$
-  \begin{bmatrix}
-  2 & 5 & 6 \\
-  10 & 122 & 5 \\
-  6 & 2 & 5
-  \end{bmatrix}
-  $$
+  ```
+  2   5   6
+  10 122  5
+  6   2   5
+  ```
 
-  Replace the center pixel value with:
+  Replace the center pixel value with the following filters:
 
-  1. **Averaging Filter** (Default mask: $\frac{1}{16} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}$)
-  2. **Weighted Averaging (WA) Filter** (Default WA mask: $\frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}$)
+  1. **Averaging Filter** (Default mask: `1/16 * [1 1 1; 1 1 1; 1 1 1]`)
+  2. **Weighted Averaging (WA) Filter** (Default WA mask: `1/16 * [1 2 1; 2 4 2; 1 2 1]`)
   3. **Median Filter**
   4. **Mode Filter**
-  5. **Midpoint Filter**: $\frac{\text{max\_val} - \text{min\_val}}{2}$
+  5. **Midpoint Filter:** `(max_val - min_val) / 2`
   6. **Harmonic Mean Filter**
 
-  *Note: Familiarize yourself with different means.*
+  *Note: Be familiar with different types of means.*
 
 ### Histogram Equalization
+
 - Will be covered in the upcoming class on **21AUG2024**.
-
-
