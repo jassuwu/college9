@@ -1,3 +1,4 @@
+﻿
 # 16AUG2024 Internal Test I Revision Class
 
 ## Unit I
@@ -24,7 +25,7 @@
 
 - **Example Problem:**
 
-  For $g/n$ defined as $2 \cos(2 \pi (4x + 6y))$, with $\Delta x = 0.2$ and $\Delta y = 0.4$, find the reconstructed signal. (Refer to similar solved problems in class.)
+  For $signal$ defined as $2 \cos(2 \pi (4x + 6y))$, with $\Delta x = 0.2$ and $\Delta y = 0.4$, find the reconstructed signal. (Refer to similar solved problems in class.)
 
 ### Distance Measures (mostly for 2 marks)
 - **Euclidean Distance**
@@ -57,7 +58,7 @@
 ### Image Filtering
 - **Example Problem:**
 
-  Given the matrix $G/n$ as:
+  Given the matrix as:
 
   $$
   \begin{bmatrix}
@@ -80,4 +81,5 @@
 
 ### Histogram Equalization
 - Will be covered in the upcoming class on **21AUG2024**.
+
 
