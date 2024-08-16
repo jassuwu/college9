@@ -8,7 +8,7 @@
   Image digitization is a three-step process:
 
   1. **Sampling**:
-     - Denoted as `fs(x, y)`.
+     - Denoted as $fs(x, y)$.
      - Involves taking specific instances of the signal.
      - It is crucial to choose the appropriate sampling frequency to avoid **Aliasing**.
 
@@ -24,7 +24,7 @@
 
 - **Example Problem:**
 
-  For \( g/n \) defined as \( 2 \cos(2 \pi (4x + 6y)) \), with \( \Delta x = 0.2 \) and \( \Delta y = 0.4 \), find the reconstructed signal. (Refer to similar solved problems in class.)
+  For $g/n$ defined as $2 \cos(2 \pi (4x + 6y))$, with $\Delta x = 0.2$ and $\Delta y = 0.4$, find the reconstructed signal. (Refer to similar solved problems in class.)
 
 ### Distance Measures (mostly for 2 marks)
 - **Euclidean Distance**
@@ -57,23 +57,23 @@
 ### Image Filtering
 - **Example Problem:**
 
-  Given the matrix \( G/n \) as:
+  Given the matrix $G/n$ as:
 
-  \[
+  $$
   \begin{bmatrix}
   2 & 5 & 6 \\
   10 & 122 & 5 \\
   6 & 2 & 5
   \end{bmatrix}
-  \]
+  $$
 
   Replace the center pixel value with:
 
-  1. **Averaging Filter** (Default mask: \( \frac{1}{16} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix} \))
-  2. **Weighted Averaging (WA) Filter** (Default WA mask: \( \frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix} \))
+  1. **Averaging Filter** (Default mask: $\frac{1}{16} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}$)
+  2. **Weighted Averaging (WA) Filter** (Default WA mask: $\frac{1}{16} \begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}$)
   3. **Median Filter**
   4. **Mode Filter**
-  5. **Midpoint Filter**: \( \frac{\text{max\_val} - \text{min\_val}}{2} \)
+  5. **Midpoint Filter**: $\frac{\text{max\_val} - \text{min\_val}}{2}$
   6. **Harmonic Mean Filter**
 
   *Note: Familiarize yourself with different means.*
