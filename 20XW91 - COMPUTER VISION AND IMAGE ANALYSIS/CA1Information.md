@@ -78,8 +78,10 @@
   2. **Weighted Averaging (WA) Filter** (Default WA mask: `1/16 * [1 2 1; 2 4 2; 1 2 1]`)
   3. **Median Filter**
   4. **Mode Filter**
-  5. **Midpoint Filter:** `(max_val - min_val) / 2`
-  6. **Harmonic Mean Filter**
+  5. **Max Filter**
+  6. **Min Filter**
+  7. **Midpoint Filter:** `(max_val - min_val) / 2`
+  8. **Harmonic Mean Filter**
 
   *Note: Be familiar with different types of means.*
 
